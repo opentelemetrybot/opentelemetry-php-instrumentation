@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  packages: write # for docker/login-action and pushing to GHCR
 jobs:
   push_to_registry:
     if: github.repository_owner == 'open-telemetry' #do not run in forks
